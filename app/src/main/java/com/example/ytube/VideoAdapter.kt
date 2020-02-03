@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 class VideoAdapter() : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
 
 
-//criar lista, inflar layout
+//3° Criar lista, inflar layout rcebendo recurso de xml(list_item_video); criação do VideoHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoHolder =
         VideoHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -23,12 +23,12 @@ class VideoAdapter() : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
 
     override fun getItemCount(): Int = 10
 
-
+//2° Chamando o bind do holder
     override fun onBindViewHolder(holder: VideoHolder, position: Int) {
         holder.bind()
     }
 
-//
+// 1° Metodo bind vai receber um video
     inner class VideoHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(){
 

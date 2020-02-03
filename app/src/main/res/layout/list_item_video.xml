@@ -5,16 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <androidx.appcompat.widget.AppCompatImageView xmlns:tools="http://schemas.android.com/tools"
-        android:id="@+id/video_thumbnail"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:background="@tools:sample/backgrounds/scenic" />
-
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/video_author"
         android:layout_width="50dp"
@@ -27,11 +17,22 @@
         android:id="@+id/video_title"
         android:layout_width="86dp"
         android:layout_height="19dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="12dp"
         android:text="Nome autor"
         app:layout_constraintStart_toEndOf="@+id/video_author"
         app:layout_constraintTop_toTopOf="@+id/video_author" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/video_thumbnail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="16:9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@tools:sample/backgrounds/scenic" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

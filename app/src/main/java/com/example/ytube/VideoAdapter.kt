@@ -6,8 +6,12 @@ import android.view.ViewGroup
 import androidx.appcompat.view.menu.ActionMenuItemView
 import androidx.recyclerview.widget.RecyclerView
 
+//criado o videoholder e inner class
+
 class VideoAdapter() : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
 
+
+//criar lista, inflar layout
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VideoHolder =
         VideoHolder(
             LayoutInflater.from(parent.context).inflate(
@@ -17,14 +21,14 @@ class VideoAdapter() : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
             )
         )
 
-
     override fun getItemCount(): Int = 10
 
 
     override fun onBindViewHolder(holder: VideoHolder, position: Int) {
+        holder.bind()
     }
 
-
+//
     inner class VideoHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(){
 

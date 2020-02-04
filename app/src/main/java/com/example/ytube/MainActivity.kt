@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 //Add adapter no recyvlerview para a lista começar a ser renderizada
         rv_main.layoutManager = LinearLayoutManager(this)
 
-//Instaciando video adapter para ele aparecer
+//Instaciando video adapter para ele aparecer na tela
         rv_main.adapter = VideoAdapter()
     }
 

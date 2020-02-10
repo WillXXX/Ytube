@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
 
 //Instaciando video adapter para ele aparecer na tela
 //Criar lista de videos no adapter
-        rv_main.adapter = VideoAdapter(videos)
+        rv_main.adapter = VideoAdapter(videos)   //08:46 no video
     }
 
 

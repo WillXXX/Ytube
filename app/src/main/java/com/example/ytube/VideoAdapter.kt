@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 //criado o videoholder e inner class
 
-class VideoAdapter() : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
+class VideoAdapter(private val videos: ListVideos) : RecyclerView.Adapter<VideoAdapter.VideoHolder>(){
 
 
 //3° Criar lista, inflar layout rcebendo recurso de xml(list_item_video); criação do VideoHolder

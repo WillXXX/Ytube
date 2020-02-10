@@ -11,11 +11,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val videos:MutableList<Video> = mutableListOf<Video>()
+
 //Add adapter no recyvlerview para a lista começar a ser renderizada
         rv_main.layoutManager = LinearLayoutManager(this)
 
+
 //Instaciando video adapter para ele aparecer na tela
-        rv_main.adapter = VideoAdapter()
+//Criar lista de videos no adapter
+        rv_main.adapter = VideoAdapter(videos)
     }
 
 

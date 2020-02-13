@@ -9,7 +9,8 @@ data class Video(
     val thumbnail: String,
     val title: String,
     val viewsCount: Long,
-    val videoUrl: String
+    val videoUrl: String,
+    val Publisher: Publisher //publicador que youtube (Definindo object o publisehr)
 )
 
 data class Publisher(
@@ -18,7 +19,7 @@ data class Publisher(
     val pictureProfileUrl: String
 )
 
-data class ListVideos(
+data class ListVideo(
     val status: Int,
     val data: List<Video>
 )

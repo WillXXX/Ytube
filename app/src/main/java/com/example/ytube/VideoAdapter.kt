@@ -35,7 +35,7 @@ class VideoAdapter(private val videos: List<Video>, val onClick:(Video) -> Unit)
         fun bind(video: Video) {
             with(itemView){
 //Usar a tag with para pegar todos itens view (buscar - list_item_video.xml)
-
+                //10:47
             }
         }
 

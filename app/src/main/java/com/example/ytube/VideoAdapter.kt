@@ -33,9 +33,11 @@ class VideoAdapter(private val videos: List<Video>, val onClick:(Video) -> Unit)
 // 1° Metodo bind vai receber um video
     inner class VideoHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         fun bind(video: Video) {
-            with(itemView){
 //Usar a tag with para pegar todos itens view (buscar - list_item_video.xml)
-                //10:47
+            with(itemView){setOnClickListener {
+                onClick.invoke(video)         //10:55
+            }
+
             }
         }
 

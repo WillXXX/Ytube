@@ -4,6 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,8 +27,24 @@ class MainActivity : AppCompatActivity() {
             println(video)
         }
     }
+//Fazer requisições web utilizando o retrofit2, utilizando a função que "getVideo" retorna lista pronta ou não por isso a "?"
+    private fun getVideo(): ListVideo?{
+        val client = OkHttpClient.Builder()
+            .build()
 
+        val request = Request.Builder()
+            .get()
+            .url("https://tiagoaguiar.co/api/youtube-videos")
+            .build()
+
+        return try {
+            val response = client.newCall(request).execute()
+
+
+        }catch (e: Exception){
+            null
+        }
+    }
 
 }
 
- //Endereço:    https://tiagoaguiar.co/api/youtube-videos

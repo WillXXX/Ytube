@@ -6,11 +6,11 @@ import retrofit2.http.Url
 //Adicionar todos data models aqui
 data class Video(
     val id: String,
-    val thumbnail: String,
+    val thumbnailUrl: String,
     val title: String,
     val viewsCount: Long,
     val videoUrl: String,
-    val Publisher: Publisher //publicador que youtube (Definindo object o publisehr)
+    val Publisher: Publisher //publicador que youtube (Definindo object o publisher)
 )
 
 data class Publisher(

@@ -3,6 +3,8 @@ package com.example.ytube
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.gson.Gson
+import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_main.*
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -40,7 +42,12 @@ class MainActivity : AppCompatActivity() {
         return try {
             val response = client.newCall(request).execute()
 
-
+            if (response.isSuccessful){
+                GsonBuilder().create()
+                    .fromJson(response.body()?.string(), ListVideo::class.java)
+            }else{
+                null
+            }
         }catch (e: Exception){
             null
         }

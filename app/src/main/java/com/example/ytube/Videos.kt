@@ -1,6 +1,5 @@
 package com.example.ytube
 
-import retrofit2.http.Url
 
 
 //Adicionar todos data models aqui

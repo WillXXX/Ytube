@@ -28,6 +28,8 @@ class MainActivity : AppCompatActivity() {
         rv_main.adapter = VideoAdapter(videos){video: Video ->
             println(video)
         }
+//efetuando chamada fora da tread principal
+        getVideo()
     }
 //Fazer requisições web utilizando o retrofit2, utilizando a função que "getVideo" retorna lista pronta ou não por isso a "?"
     private fun getVideo(): ListVideo?{
